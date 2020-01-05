@@ -28,7 +28,7 @@ module "vpc" {
   source = "github.com/terraform-aws-modules/terraform-aws-vpc"
   name = var.vpc_name
   cidr = var.vpc_cidr
-  azs = slice(data.aws_availability_zones.available.names, 0, var.number_of_availability_zones)
+  azs = slice(data.aws_availability_zones.available.names, 0, var.number_of_availability_zones - 1)
   private_subnets = var.private_subnets
   public_subnets = var.public_subnets
   enable_nat_gateway = var.enable_nat_gateway
