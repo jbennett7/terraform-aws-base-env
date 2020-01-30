@@ -16,7 +16,7 @@ variable "bastion_host_instance_type" {
   description = "The instance type used for the bastion host."
 }
 
-variable "bastion_ingress_cidr_blocks" {
+variable "packer_build_ingress_cidr_blocks" {
   type        = list
   description = "The bastion host ingress cidr to apply for ssh access."
 }
